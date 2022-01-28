@@ -1,47 +1,29 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using ConsoleApp1;
 
-
-int num1 = 20;
-int num2 = 10;
-
-int add = num1 + num2;
-int sub = num1 - num2;
-int div = num1 / num2;
-int mul = num1 * num2;
-int mod = num1 % num2;
-
-Console.WriteLine($"The Sum of {num1} and {num2} is {add}");
-Console.WriteLine($"The Diffrence of {num1} and {num2} is {sub}");
-Console.WriteLine($"The Quotient of {num1} and {num2} is {div}");
-Console.WriteLine($"The Product of {num1} and {num2} is {mul}");
-Console.WriteLine($"The Remainder of {num1} and {num2} is {mod}");
-
-if (num1 % 2 == 0)
+namespace Program
 {
-    Console.WriteLine($"{num1} is an Even Number ");
-    if (num2 % 2 == 0)
+    internal class Program
     {
-        Console.WriteLine($"{num2} is also an Even Number ");
+        static void Main(string[] args)
+        {
+
+            Calculator mymath = new Calculator();
+
+            Console.WriteLine("Outputs: ");
+            Console.WriteLine($"The Sum of 8.2 and 4.2 is {mymath.Sum(8.2, 4.2)}");
+            Console.WriteLine($"The Substraction of 8.2 and 4.2 is {mymath.Sub(8.2,4.2)}");
+            Console.WriteLine($"The Multiplication of 8.2 and 4.2 is {mymath.Mul(8.2,4.2)}");
+            Console.WriteLine($"The Division of 8.2 and 4.2 is {mymath.Div(8.2,4.2)}");
+
+            
+            //Muhammad Rameez 
+            //Course: Asp.Net by mentorsh
+            //Assignment 06
+        }
     }
-    else
-        Console.WriteLine($"However, {num2} is a Odd Number ");
-}
-else
-{
-    Console.WriteLine($"{num1} is a Odd Number ");
-    if (num2 % 2 == 0)
-    {
-        Console.WriteLine($"However, {num2} is an Even Number ");
-    }
-    else
-        Console.WriteLine($"{num2} is also a Odd Number ");
 }
 
-if (num1 % 2 == 0 && num2 % 2 == 0)
-{
-    Console.WriteLine("\n\nHello, World!");
-    Console.WriteLine("You are Lucky");
-
-}
-// Console is not recording in this video 
-// Muhammad Rameez 
+/*1. Make class "Calculator"
+  2. Create functions Sum, Subtract, Divide, Multiply with return type double.
+  3. Use double for parameters and results.*/
